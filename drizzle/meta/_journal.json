@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787728934910,
+      "tag": "0000_overconfident_princess_powerful",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787729269338,
+      "tag": "0001_organic_nightshade",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787729726439,
+      "tag": "0002_even_meteorite",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787730672422,
+      "tag": "0003_new_changeling",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787854127140,
+      "tag": "0004_blushing_pete_wisdom",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1787859669905,
+      "tag": "0005_amazing_siren",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1787859930059,
+      "tag": "0006_fearless_strong_guy",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1787861030976,
+      "tag": "0007_huge_jackal",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1787865453622,
+      "tag": "0008_green_venom",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1787867064204,
+      "tag": "0009_absent_runaways",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1791535793925,
+      "tag": "0010_clumsy_wallflower",
+      "breakpoints": true
+    }
+  ]
+}

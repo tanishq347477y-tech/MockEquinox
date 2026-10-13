@@ -1,0 +1,150 @@
+# Project TODO
+
+- [x] Define the MockEquinox product domain and implementation-ready MVP scope.
+- [x] Establish an elegant, responsive design system and public landing experience.
+- [x] Extend user roles for student, reviewer, administrator, and super administrator access.
+- [x] Model exams, subjects, topics, versioned questions, question options, tags, and review states.
+- [x] Add protected admin procedures for question-bank CRUD, search, filters, review queues, and audit events.
+- [x] Add document metadata, extraction job, AI validation, duplicate-check, quality-score, and reviewer-approval foundations.
+- [x] Model configurable tests, attempt state, answers, timing, review flags, scoring, and result analysis.
+- [x] Build student dashboard, test browsing, test instructions, timed attempt, autosave, recovery, submit, and result views.
+- [x] Build the analytics dashboard with question, subject, topic, time, and historical-performance perspectives.
+- [x] Build admin and reviewer workspace surfaces for question governance and content-processing visibility.
+- [x] Build plan, subscription, payment-status, access-control, renewal, and transaction-history foundations for Razorpay integration.
+- [x] Add rate-limit, structured error, audit-log, operational-status, caching, monitoring, backup, and CI/CD readiness documentation.
+- [x] Add automated tests for the critical scoring, access-control, and test-state behavior.
+- [x] Verify desktop and mobile rendering, run the test suite and type check, and create the final checkpoint.
+- [x] Add protected PDF intake that validates files, stores documents securely, and creates durable processing jobs.
+- [x] Add deterministic duplicate fingerprinting and quality-score helpers for question review.
+- [x] Add live Razorpay order, callback, webhook, renewal, transaction-history, and subscription-access procedures once production credentials are provided.
+- [x] Configure placeholder server-only Razorpay variables and ensure payment routes remain disabled until real production values are supplied.
+- [x] Connect reviewer and administrator workflows to authenticated live data after representative content is loaded.
+- [x] Initialize the UI Pro configuration with the Manus AI option if it is compatible with the existing project. (Not initialized: the official CLI has no Manus target.)
+- [x] Evaluate and selectively apply UI/UX Pro Max guidance only where it materially improves MockEquinox. (No additional scaffolding needed.)
+- [x] Document the UI/UX Pro Max compatibility decision and the applicable design checks for future MockEquinox work.
+- [x] Add a study-centered MockE/MockEquinox cinematic hero that uses the provided looping video and replaces unrelated visual branding.
+- [x] Define the shared cinematic theme, study-navigation model, and exam-category catalog for the expanded platform.
+- [x] Add a themed login screen after the landing experience.
+- [x] Build a student dashboard that matches the cinematic MockE study visual system.
+- [x] Add at least 25 exam categories with category-specific mock-test bundle choices and access states.
+- [x] Add themed pricing and purchase interfaces for exam categories and mock-test quantities.
+- [x] Add a themed administrator workspace for category, bundle, student, content, and revenue oversight.
+- [x] Verify the new login, student, exam, pricing, and administrator experience across desktop and mobile.
+- [x] Upload and prepare the supplied second video for all non-landing MockE study pages.
+- [x] Apply a cohesive new non-landing visual theme while retaining the original video only on the first landing page.
+- [x] Add a polished purchases and subscriptions center with current access, purchase history, and renewal status.
+- [x] Add a smooth contextual mock-pack recommendation card that guides students toward the next purchase.
+- [x] Verify the refreshed platform theme and purchases experience on desktop and mobile.
+- [x] Retheme the remaining mock-attempt, results, reviewer, and legacy plan surfaces so the entire platform carries the refreshed MockE visual language.
+- [x] Explicitly retheme reviewer operations and legacy plan cards, controls, tables, and pricing panels to the dark-glass MockE system.
+- [x] Visually verify the reviewer operations and legacy plans routes on desktop and mobile after the explicit retheme.
+- [x] Fix the reported white-on-white and low-contrast text regression across refreshed MockE surfaces.
+- [x] Verify readable text, headings, controls, and purchase actions on desktop and mobile after the contrast repair.
+- [x] Capture a post-fix desktop and mobile contrast sweep across login, study desk, exam library, purchases, pricing, operations, plans, and admin.
+- [x] Add persistent light mode, dark mode, and high-contrast appearance controls across MockEquinox.
+- [x] Add a user-controlled reduced-motion option that pauses decorative landing and study-page videos.
+- [x] Make the display preferences accessible from both landing and authenticated study navigation.
+- [x] Verify light, dark, high-contrast, and reduced-motion modes across desktop and mobile flows.
+- [x] Add a deterministic query-based preference override for visual QA of each appearance and motion mode.
+- [x] Capture desktop and mobile screenshots for each appearance and motion state on representative study routes.
+- [x] Restrict developer administration and its navigation entry point to the project owner only.
+- [x] Add distinct sign-in and sign-up options that enter the managed authentication flow.
+- [x] Add a learner account profile page with account details, access overview, and preferences entry points.
+- [x] Add a secure logout action and update navigation for signed-in and signed-out states.
+- [x] Verify owner-only admin visibility and sign-in, profile, and logout experiences on desktop and mobile. (Validated with responsive role-state views and managed logout client/server tests.)
+- [x] Redirect non-owner direct admin routes away from the developer workspace.
+- [x] Redirect signed-out profile routes to the sign-in screen and expose appearance preferences from the profile page.
+- [x] Exercise and document signed-in owner, signed-in learner, and post-logout UI states on desktop and mobile. (Post-logout path is validated by session-clear and awaited-navigation tests.)
+- [x] Add explicit unit coverage and QA documentation for developer navigation visibility and post-logout routing.
+- [x] Add a non-privileged QA display override to visually exercise owner, learner, and signed-out navigation without bypassing backend authorization.
+- [x] Redesign the owner developer workspace so it is functionally and visually distinct from the learner study interface.
+- [x] Restore clear sign-in and create-account entry points for signed-out visitors across public study routes.
+- [x] Remove light mode and retain only dark and high-contrast display preferences.
+- [x] Fix display-preference popover stacking on the mock-start screen and make preferences work consistently on every route.
+- [x] Verify owner, learner, signed-out, display-preference, and mock-start flows on desktop and mobile.
+- [x] Capture final mobile learner redirect evidence and cross-route dark/high-contrast preference outcomes.
+- [x] Audit existing owner authorization, user data, exam models, and content-management procedures for reuse.
+- [x] Add owner-only user management controls for viewing users and updating permitted account roles.
+- [x] Add owner-only exam-content controls for listing, creating, editing, and safely managing question records.
+- [x] Wire CRUD controls into the Owner Console with loading, empty, success, and error states.
+- [x] Test and verify owner-only user and content management workflows on desktop and mobile.
+- [x] Add complete query-state handling for catalogue, question-list, and question-detail management views.
+- [x] Add successful owner CRUD contract coverage without mutating production data.
+- [x] Add higher-fidelity Owner Console client interaction tests for mutation success and post-mutation refresh behavior.
+- [x] Extend Owner Console client interaction coverage to successful catalogue creation and visible refresh feedback without seeding production data.
+- [x] Review the existing document ingestion, AI draft extraction, duplicate, quality, and reviewer-approval contracts for owner-console reuse.
+- [x] Add owner-only PDF intake that stores documents securely and sends extracted content through AI question drafting, duplicate checks, and quality review.
+- [x] Add a documented structured JSON import option for validated question-and-option source files.
+- [x] Add an owner review surface for generated draft question papers before approved questions are published to the bank.
+- [x] Reduce and neutralize the floating study-pack recommendation so it remains contained within the viewport.
+- [x] Test source-intake authorization, validation, AI-review draft handling, direct import parsing, and responsive recommendation placement.
+- [x] Render complete imported draft details, including answer options, correct answer, explanation, quality, and duplicate state, before question-bank approval.
+- [x] Add explicit invalid-PDF and malformed structured-import rejection tests.
+- [x] Inventory auth, owner authorization, secret exposure, file/AI intake, payment, and API attack surfaces.
+- [x] Run safe adversarial authorization, malformed-input, rate-limit, and client-exposure checks against the local project.
+- [x] Confirm managed sign-in, sign-up, logout, and protected-route behavior without introducing frontend credentials.
+- [x] Harden any discovered gaps in server procedures, security headers, validation, and payment fail-closed behavior.
+- [x] Add regression coverage for discovered security issues and validate the final production build.
+- [x] Prevent public storage-proxy access to private owner-import documents while retaining server-side AI processing access.
+- [x] Add webhook request throttling and payload-shape limits to reduce unauthenticated payment endpoint abuse.
+- [x] Exercise and verify 429 responses for payment, owner-intake, and webhook throttling controls.
+- [x] Add server-side regression coverage for private owner-import access and malformed webhook event handling.
+- [x] Review the current hero shell and plan a scrollable video-free lower-page narrative for MockEquinox.
+- [x] Add value, workflow, exam breadth, trust, pricing, and final study-start sections to the landing page.
+- [x] Design and implement a subtle animated pencil-line curve that guides the landing page without adding another video.
+- [x] Preserve high contrast and reduced-motion behavior for all landing-page animations and decoration.
+- [x] Verify the scrollable landing experience, navigation calls to action, and responsive layout on desktop and mobile.
+- [x] Exercise hero, exam-library, pricing, and final study-start landing CTAs across desktop and mobile.
+- [x] Add interaction-level landing CTA regression coverage for expected route targets.
+- [x] Add browser-level desktop and mobile CTA route verification for the redesigned landing page.
+- [x] Replace the repeated landing curves with one continuous scroll-progress pencil line.
+- [x] Route the pencil through reserved whitespace so it does not touch page edges or landing content.
+- [x] Add an illustrated lower-corner pen stand that receives the pencil at the end of the landing narrative.
+- [x] Preserve reduced-motion and high-contrast support for the continuous line and pen stand.
+- [x] Verify scroll progress, content clearance, destination behavior, and responsive layout on desktop and mobile.
+- [x] Hide the Developer navigation entry until the configured owner has authenticated through managed OAuth, while retaining server-side owner authorization.
+- [x] Add regression coverage and verify signed-out, learner, and owner Developer-navigation visibility states.
+- [x] Confirm in a learner browser state that the Developer navigation entry stays hidden after the owner-session gating update.
+- [x] Add an owner-only audit-log page in the Developer Console for recorded administrative changes.
+- [x] Verify audit-log authorization, loading/empty/error states, and responsive console behavior.
+- [x] Add client regression coverage for the audit log’s loading, empty, and error states, and verify its rendered entries in the owner Console preview.
+- [x] Deferred at owner request: live owner-session acceptance testing of the Activity log was not performed because account access is unavailable.
+- [x] Record the owner-approved deferral of the optional live owner-login acceptance check for a future session.
+- [x] Audit the existing deployment configuration, scalability constraints, environment validation, and production operations posture.
+- [x] Add deployment-safe health, readiness, request-correlation, and graceful-shutdown safeguards for autoscaling operation.
+- [x] Add documented production configuration checks and operational runbook guidance without exposing credentials.
+- [x] Add regression coverage and validate the deployable production build and runtime health endpoints.
+- [x] Split heavyweight frontend vendor modules into cacheable production chunks and confirm the initial bundle is reduced.
+- [x] Bind exactly to the managed platform port in production while retaining development-only local port fallback.
+- [x] Audit the existing document intake, processing-job records, and scheduled-execution foundations for durable queue reuse.
+- [x] Define durable queue claiming, idempotency, retry/backoff, and dead-letter semantics for PDF and AI review jobs.
+- [x] Move PDF extraction and AI draft generation out of owner intake requests into asynchronous worker execution.
+- [x] Add owner-only queue visibility and safe retry controls for pending, running, failed, and dead-letter jobs.
+- [x] Add queue reliability tests, scheduled-worker validation, and deployment runbook guidance.
+- [x] Run the durable queue through an autoscale-compatible, idempotent scheduled batch worker rather than an always-running process.
+- [x] Eliminate mobile horizontal overflow in the source-intake and durable-queue controls while retaining readable owner actions.
+- [x] Isolate the scheduled owner PDF/AI worker from legacy document-processing records so it never claims an incompatible job payload.
+- [x] Persist each owner PDF document and its durable queue job atomically so interrupted intake cannot leave an orphaned source record.
+- [x] Deferred and documented: after independent deployment, configure the external cron worker with `CRON_SECRET`; it has not been activated from this development environment.
+- [x] Audit existing plan, subscription, mock-attempt, and access-control contracts for monthly pricing compatibility.
+- [x] Define a free plan that allows four mock-test starts per calendar month and monthly paid-plan rules.
+- [x] Update pricing, purchase, access, and subscription surfaces to present monthly plans and the free-tier allowance.
+- [x] Enforce free-tier monthly mock limits server-side without weakening paid subscription access.
+- [x] Add regression coverage and desktop/mobile verification for monthly pricing and the four-test free tier.
+- [x] Update Exam Library copy and actions from quantity-based mock packs to free-tier and monthly subscription access states.
+- [x] Update Purchases and related subscription surfaces to show the monthly free allowance and remove legacy mock-pack recommendations.
+- [x] Add focused regression and browser checks for revised Exam Library and Purchases monthly-access language and actions.
+- [x] Keep Exam Library and My Access entitlement messaging neutral while the server-side monthly allowance is still loading.
+- [x] Replace remaining active landing, dashboard, navigation, and shared pricing CTAs that still reference mock packs or fixed mock quantities.
+- [x] Update or remove the reachable legacy plans route so it no longer presents outdated 5/10/25-pack pricing.
+- [x] Add focused regression and browser checks confirming no active monthly-access surface retains legacy pack copy.
+- [x] Audit managed-platform dependencies across authentication, AI processing, storage, scheduling, analytics, and static assets.
+- [x] Add a committed secure environment template (`config/environment.template`) covering database, session, owner, Razorpay, AI, storage, OAuth, CORS, and operational variables without secret values.
+- [x] Add portable server-side configuration validation and provider adapters so credentials remain outside frontend code and environment files stay uncommitted.
+- [x] Replace managed authentication and other runtime-only platform dependencies with documented external-provider or self-hostable alternatives.
+- [x] Write independent deployment and secrets-management documentation with local-development instructions.
+- [x] Add regression coverage for portable configuration and run the full security, type, and production-build validation suite.
+- [x] Audit and document managed analytics configuration and static-asset delivery assumptions in the portability inventory.
+- [x] Commit a concise portability-dependency audit covering all replacement seams and their external configuration.
+- [x] Replace the active MonthlyPricing managed media URL with the portable public media-base variable.
+- [x] Run a final managed-dependency sweep and full validation, then recheck the active pricing route on desktop and mobile.

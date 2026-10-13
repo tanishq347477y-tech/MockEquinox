@@ -1,0 +1,47 @@
+# Copy to .env for local development. Never commit real values.
+
+# Core application
+NODE_ENV=development
+PORT=3000
+APP_ORIGIN=http://localhost:3000
+CORS_ORIGINS=http://localhost:3000
+VITE_MEDIA_BASE_URL=https://cdn.example.com/mocke
+SESSION_SECRET=replace-with-a-random-32-plus-character-secret
+OWNER_EMAIL=owner@example.com
+DATABASE_URL=mysql://mocke_user:replace-me@127.0.0.1:3306/mockequinox
+
+# Transactional email for verification and password resets (server-only)
+EMAIL_PROVIDER_URL=https://api.your-email-provider.example/v1
+EMAIL_API_KEY=
+EMAIL_FROM=MockE <no-reply@your-domain.example>
+
+# Razorpay: leave blank to keep payment creation disabled
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+RAZORPAY_WEBHOOK_SECRET=
+
+# OpenAI-compatible AI provider (server-only)
+LLM_PROVIDER=openai-compatible
+LLM_API_KEY=
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL=gpt-4o-mini
+LLM_PDF_MODEL=gpt-4o-mini
+# Set true only in a non-production staging environment to enable the owner-only no-write AI smoke test.
+STAGING_AI_TEST_MODE=false
+
+# S3-compatible private object storage: AWS S3, Cloudflare R2, or MinIO
+S3_REGION=ap-south-1
+S3_BUCKET=mocke-private
+S3_ACCESS_KEY_ID=
+S3_SECRET_ACCESS_KEY=
+S3_ENDPOINT=
+S3_FORCE_PATH_STYLE=false
+S3_PUBLIC_BASE_URL=
+
+# Optional external OAuth provider; local email/password works without it
+GOOGLE_OAUTH_CLIENT_ID=
+GOOGLE_OAUTH_CLIENT_SECRET=
+GOOGLE_OAUTH_CALLBACK_URL=http://localhost:3000/api/auth/google/callback
+
+# Set a long random secret. External cron sends this in x-cron-secret.
+CRON_SECRET=replace-with-a-long-random-secret

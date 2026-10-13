@@ -1,0 +1,8 @@
+packages:
+  - "."
+overrides:
+  tailwindcss>nanoid: 3.3.7
+  proxy-addr: 2.0.8
+  qs: 6.16.0
+patchedDependencies:
+  wouter@3.7.1: patches/wouter@3.7.1.patch

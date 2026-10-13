@@ -1,0 +1,119 @@
+--- direct identifiers ---
+client/src/components/ManusDialog.tsx:12:interface ManusDialogProps {
+client/src/components/ManusDialog.tsx:21:export function ManusDialog({
+client/src/components/ManusDialog.tsx:28:}: ManusDialogProps) {
+client/src/components/ManusDialog.tsx:73:            Please login with Manus to continue
+client/src/components/ManusDialog.tsx:83:            Login with Manus
+client/src/components/StudyExperience.tsx:10:const landingVideoUrl = "/manus-storage/mocke-study-hero_0c9d91a4.mp4";
+client/src/components/StudyExperience.tsx:11:const pageVideoUrl = "/manus-storage/mocke-study-pages_ce34c916.mp4";
+client/src/components/OwnerIntake.test.tsx:35:    mocks.processPdf.mockImplementation((_input: unknown, options: { onSuccess?: (output: unknown) => void }) => options.onSuccess?.({ documentId: 7, jobId: 17, status: "queued", storageUrl: "/manus-storage/owner-imports/source.pdf", sourceLabel: "AI PDF import · source.pdf" }));
+client/src/components/MonthlyPricing.tsx:35:  return <div className="study-hero relative min-h-screen overflow-hidden bg-[#06353a] text-white"><video ref={videoRef} className="absolute inset-0 size-full object-cover" autoPlay={!reducedMotion} loop muted playsInline aria-hidden="true"><source src="/manus-storage/mocke-study-pages_ce34c916.mp4" type="video/mp4" /></video><div className="study-video-overlay absolute inset-0 z-0" style={{ backgroundColor: "rgba(5, 47, 53, 0.84)" }} /><header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 sm:py-6"><button onClick={() => onNavigate("dashboard")} className="font-display text-[28px] tracking-[-0.05em] text-white">MockE<sup className="ml-0.5 align-super font-sans text-[9px] tracking-normal">®</sup></button><div className="hidden items-center gap-5 md:flex"><button onClick={() => onNavigate("student")} className="text-sm text-white/65 hover:text-white">Study desk</button><button onClick={() => onNavigate("exams")} className="text-sm text-white/65 hover:text-white">Exam library</button><button onClick={() => onNavigate("purchases")} className="text-sm text-white/65 hover:text-white">My access</button></div><button onClick={() => onNavigate(authenticated ? "profile" : "login")} className="liquid-glass rounded-full px-4 py-2 text-sm font-medium text-white">{authenticated ? name || "Profile" : "Sign in"}</button></header><main className="relative z-10 mx-auto max-w-7xl px-5 pb-16 pt-10 sm:px-8 sm:pt-14"><div className="max-w-3xl"><p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f3ca85]">Monthly study access</p><h1 className="mt-4 font-display text-5xl leading-[0.94] tracking-[-0.055em] text-white sm:text-7xl">A plan that resets<br /><em className="not-italic text-white/55">with your month.</em></h1><p className="mt-5 max-w-2xl text-base leading-7 text-white/70">Start free with four mock-test attempts each calendar month. When you need more sustained practice, choose monthly access for the exam you are preparing for.</p>{authenticated && <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-full border border-[#f3ca85]/30 bg-[#1b403f]/60 px-4 py-2 text-sm text-[#f7e0a9]"><Sparkles className="size-4" />{freeRemaining === null ? "Your active monthly access has no free-tier start cap." : `${freeRemaining} of 4 free mock starts remain this month.`}</div>}</div><section className="mt-10 grid max-w-5xl gap-5 md:grid-cols-2">{plans.map(plan => <article key={plan.id} className={`rounded-[28px] border p-6 backdrop-blur-xl sm:p-8 ${selected.id === plan.id ? "border-[#f3ca85]/85 bg-[#09383b]/82 shadow-[0_18px_45px_rgba(0,0,0,0.24)]" : "border-white/15 bg-[#003447]/60"}`}><p className="text-[10px] font-semibold uppercase tracking-[0.17em] text-[#f3ca85]">{plan.eyebrow}</p><h2 className="mt-5 font-display text-4xl tracking-[-0.05em] text-white">{plan.title}</h2><div className="mt-7 flex items-baseline gap-2"><p className="font-display text-5xl text-white">{plan.price}</p><p className="text-sm text-white/55">{plan.suffix}</p></div><p className="mt-5 text-sm leading-6 text-white/70">{plan.detail}</p><ul className="mt-6 space-y-3">{plan.points.map(point => <li key={point} className="flex items-start gap-2 text-sm text-white/85"><Check className="mt-0.5 size-4 shrink-0 text-[#f3ca85]" />{point}</li>)}</ul><button onClick={() => onSelectPlan(plan.id)} className={`mt-8 w-full rounded-full px-5 py-3 text-sm font-semibold ${selected.id === plan.id ? "bg-white text-[#06353a]" : "border border-white/25 text-white hover:bg-white/10"}`}>{selected.id === plan.id ? "Selected" : "Choose this plan"}</button></article>)}</section><section className="mt-6 flex max-w-5xl flex-col justify-between gap-4 rounded-2xl border border-white/15 bg-[#003447]/65 p-5 backdrop-blur-xl sm:flex-row sm:items-center"><div><p className="text-sm font-semibold text-white">{selected.id === 4 ? "Free plan · 4 mock starts this calendar month" : `${selectedExam} · Monthly access`}</p><p className="mt-1 text-xs leading-5 text-white/60">{selected.id === 4 ? "The allowance is tracked securely by your account and resets at the next calendar month." : "Checkout activates only after server-side payment verification."}</p></div>{selected.id === 4 ? <button onClick={goFree} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#06353a]">Start free <ArrowRight className="ml-1 inline size-4" /></button> : <button onClick={onCheckout} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#06353a]"><CreditCard className="mr-1 inline size-4" />Continue securely</button>}</section><p className="mt-5 flex items-center gap-2 text-xs text-white/55"><Infinity className="size-4" />Monthly access is scoped to the selected exam category and remains subject to server-side subscription status.</p></main></div>;
+client/src/components/MonthlyAccessViews.tsx:19:  return <div className="study-hero relative min-h-screen overflow-hidden bg-[#06353a] text-white"><video ref={videoRef} className="absolute inset-0 size-full object-cover" autoPlay={!reducedMotion} loop muted playsInline aria-hidden="true"><source src="/manus-storage/mocke-study-pages_ce34c916.mp4" type="video/mp4" /></video><div className="study-video-overlay absolute inset-0 z-0" style={{ backgroundColor: "rgba(5, 47, 53, 0.84)" }} /><header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 sm:py-6"><button onClick={() => onNavigate("dashboard")} className="font-display text-[28px] tracking-[-0.05em] text-white">MockE<sup className="ml-0.5 align-super font-sans text-[9px] tracking-normal">®</sup></button><nav className="hidden items-center gap-5 md:flex" aria-label="Study navigation"><button onClick={() => onNavigate("student")} className="text-sm text-white/65 hover:text-white">Study desk</button><button onClick={() => onNavigate("exams")} className="text-sm text-white/65 hover:text-white">Exam library</button><button onClick={() => onNavigate("purchases")} className="text-sm text-white/65 hover:text-white">My access</button><button onClick={() => onNavigate("pricing")} className="text-sm text-white/65 hover:text-white">Monthly plans</button></nav><button onClick={() => onNavigate(authenticated ? "profile" : "login")} className="liquid-glass rounded-full px-4 py-2 text-sm font-medium text-white">{authenticated ? name || "Profile" : "Sign in"}</button></header>{children}</div>;
+client/src/const.ts:5:// Start the Manus OAuth login. Call this from an event handler or effect at the
+client/src/const.ts:16:  const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
+client/src/const.ts:17:  const appId = import.meta.env.VITE_APP_ID;
+client/src/pages/Home.tsx:115:      <source src="/manus-storage/mocke-study-hero_0c9d91a4.mp4" type="video/mp4" />
+client/src/pages/Home.tsx:325:  return <div className="legacy-study study-hero min-h-screen overflow-hidden bg-[#06353a] text-white"><video ref={legacyVideoRef} className="absolute inset-0 size-full object-cover" autoPlay={!reducedMotion} loop muted playsInline aria-hidden="true"><source src="/manus-storage/mocke-study-pages_ce34c916.mp4" type="video/mp4" /></video><div className="study-video-overlay absolute inset-0 z-0" style={{ backgroundColor: "rgba(5, 47, 53, 0.82)" }} /><header className="relative z-20 mx-auto flex h-[78px] max-w-7xl items-center justify-between px-5 sm:px-8"><button onClick={() => navigate("dashboard")} className="font-display text-[27px] tracking-[-0.05em] text-white">MockE<sup className="ml-0.5 align-super font-sans text-[9px] tracking-normal">®</sup></button><div className="hidden items-center gap-5 md:flex"><button onClick={() => navigate("student")} className="text-sm text-white/65 hover:text-white">Study desk</button><button onClick={() => navigate("exams")} className="text-sm text-white/65 hover:text-white">Exam library</button><button onClick={() => navigate("purchases")} className="text-sm text-white/65 hover:text-white">My access</button><button onClick={() => navigate("pricing")} className="text-sm text-white/65 hover:text-white">Mock packs</button></div><div className="flex items-center gap-2"><AccessibilityControls />{displayAccount.authenticated ? <button onClick={() => navigate("profile")} className="liquid-glass rounded-full px-4 py-2 text-sm font-medium text-white">{user?.name || "Profile"}</button> : <><button onClick={() => navigate("login")} className="rounded-full px-3 py-2 text-sm font-medium text-white/80 hover:text-white">Sign in</button><button onClick={() => navigate("login")} className="rounded-full bg-white px-3 py-2 text-sm font-semibold text-[#003447]">Create account</button></>}</div></header><main className="relative z-10 mx-auto max-w-7xl px-5 pb-12 pt-5 sm:px-8">{screen === "instructions" && <TestInstructions onBegin={beginAttempt} onBack={() => navigate("dashboard")} />}{screen === "test" && <TestView questionIndex={questionIndex} setQuestionIndex={setQuestionIndex} answers={answers} setAnswers={setAnswers} reviewed={reviewed} setReviewed={setReviewed} secondsLeft={secondsLeft} onPersist={persistProgress} onSubmit={submitTest} />}{screen === "results" && <Results score={result} onReview={() => navigate("test")} onHome={() => navigate("dashboard")} />}{screen === "operations" && <Operations />}{screen === "plans" && <Plans />}</main></div>;
+client/src/securityExposure.test.ts:11:    expect(transport).not.toContain("manus-cookie");
+client/src/securityExposure.test.ts:13:    expect(auth).not.toContain("manus-cookie");
+client/src/securityExposure.test.ts:20:    expect(map).not.toContain("VITE_FRONTEND_FORGE_API_KEY");
+client/src/securityExposure.test.ts:21:    expect(map).not.toContain("VITE_FRONTEND_FORGE_API_URL");
+server/_core/dataApi.ts:4: *     query: { gl: "US", hl: "en", q: "manus" },
+server/_core/dataApi.ts:21:    throw new Error("BUILT_IN_FORGE_API_URL is not configured");
+server/_core/dataApi.ts:24:    throw new Error("BUILT_IN_FORGE_API_KEY is not configured");
+server/_core/env.ts:2:  appId: process.env.VITE_APP_ID ?? "",
+server/_core/env.ts:5:  oAuthServerUrl: process.env.OAUTH_SERVER_URL ?? "",
+server/_core/env.ts:8:  forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
+server/_core/env.ts:9:  forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
+server/_core/heartbeat.ts:49:      message: "Heartbeat service URL is not configured (BUILT_IN_FORGE_API_URL).",
+server/_core/heartbeat.ts:55:      message: "Heartbeat service API key is not configured (BUILT_IN_FORGE_API_KEY).",
+server/_core/heartbeat.ts:78:    headers["x-manus-user-session"] = userSession;
+server/_core/heartbeat.ts:199: * owner-only via the sandbox CLI (`manus-heartbeat list --user-id <uid>`).
+server/_core/imageGeneration.ts:18:import { storagePut } from "server/storage";
+server/_core/imageGeneration.ts:47:    throw new Error("BUILT_IN_FORGE_API_URL is not configured");
+server/_core/imageGeneration.ts:50:    throw new Error("BUILT_IN_FORGE_API_KEY is not configured");
+server/_core/imageGeneration.ts:99:  const { url } = await storagePut(
+server/_core/imageGeneration.ts:126:    throw new Error("BUILT_IN_FORGE_API_URL is not configured");
+server/_core/imageGeneration.ts:129:    throw new Error("BUILT_IN_FORGE_API_KEY is not configured");
+server/_core/llm.ts:218:    : "https://forge.manus.im/v1/chat/completions";
+server/_core/llm.ts:440:    : "https://forge.manus.im/v1/models";
+server/_core/map.ts:2: * Google Maps API Integration for Manus WebDev Templates
+server/_core/map.ts:27:      "Google Maps proxy credentials missing: set BUILT_IN_FORGE_API_URL and BUILT_IN_FORGE_API_KEY"
+server/_core/notification.ts:61: * Dispatches a project-owner notification through the Manus Notification Service.
+server/_core/sdk.ts:16:} from "./types/manusTypes";
+server/_core/sdk.ts:36:        "[OAuth] ERROR: OAUTH_SERVER_URL is not configured! Set OAUTH_SERVER_URL environment variable."
+server/_core/sdk.ts:162:   * Create a session token for a Manus user openId
+server/_core/sdk.ts:338:    name: userInfo.name || "Manus Scheduled Task",
+server/_core/storageProxy.ts:6:  app.get("/manus-storage/*key", async (req, res) => {
+server/_core/voiceTranscription.ts:82:        details: "BUILT_IN_FORGE_API_URL is not set"
+server/_core/voiceTranscription.ts:89:        details: "BUILT_IN_FORGE_API_KEY is not set"
+server/_core/operationalRoutes.ts:10:  const required = ["DATABASE_URL", "JWT_SECRET", "VITE_APP_ID", "OAUTH_SERVER_URL", "OWNER_OPEN_ID"];
+server/_core/operationalRoutes.test.ts:54:    expect(() => assertProductionConfiguration({ NODE_ENV: "production", DATABASE_URL: "db", JWT_SECRET: "secret", VITE_APP_ID: "app", OAUTH_SERVER_URL: "oauth", OWNER_OPEN_ID: "owner" })).not.toThrow();
+server/auth.logout.test.ts:21:    loginMethod: "manus",
+server/ownerConsole.crud.test.ts:15:  storagePut: vi.fn(),
+server/ownerConsole.crud.test.ts:16:  storageGetSignedUrl: vi.fn(),
+server/ownerConsole.crud.test.ts:41:vi.mock("./storage", async importOriginal => ({ ...(await importOriginal<typeof import("./storage")>()), storagePut: mocks.storagePut, storageGetSignedUrl: mocks.storageGetSignedUrl }));
+server/ownerConsole.crud.test.ts:48:    user: { id: 1, openId: "owner-crud-test", name: "Owner", email: "owner@example.com", loginMethod: "manus", role: "admin", createdAt: new Date(), updatedAt: new Date(), lastSignedIn: new Date() },
+server/ownerConsole.crud.test.ts:81:    mocks.storagePut.mockResolvedValue({ key: "owner-imports/1/source.pdf", url: "/manus-storage/owner-imports/1/source.pdf" });
+server/ownerConsole.crud.test.ts:82:    mocks.storageGetSignedUrl.mockResolvedValue("https://signed.example/source.pdf");
+server/ownerConsole.crud.test.ts:122:    expect(mocks.storagePut).toHaveBeenCalledWith(expect.stringContaining("owner-imports/1/source.pdf"), expect.any(Buffer), "application/pdf");
+server/rbac.test.ts:13:      loginMethod: "manus",
+server/routers.ts:9:import { storagePut } from "./storage";
+server/routers.ts:14:import { createHeartbeatJob, updateHeartbeatJob } from "./_core/heartbeat";
+server/routers.ts:190:      const storage = await storagePut(`uploads/${ctx.user.id}/${input.fileName}`, bytes, "application/pdf");
+server/routers.ts:455:        const storage = await storagePut(`owner-imports/${ctx.user.id}/${safeName}`, bytes, "application/pdf");
+server/routers.ts:489:          const heartbeat = await createHeartbeatJob({ name: "mocke-owner-pdf-ai-queue", cron, path: "/api/scheduled/process-pdf-queue", method: "POST", payload: {}, description: "Process one durable MockEquinox PDF AI queue job per minute" }, sessionToken);
+server/routers.ts:490:          if (!heartbeat.taskUid) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "The scheduled queue worker was not created." });
+server/routers.ts:491:          taskUid = heartbeat.taskUid;
+server/storage.ts:1:// Preconfigured storage helpers for Manus WebDev templates
+server/storage.ts:3:// Downloads return /manus-storage/{key} paths served via 307 redirect.
+server/storage.ts:13:      "Storage config missing: set BUILT_IN_FORGE_API_URL and BUILT_IN_FORGE_API_KEY",
+server/storage.ts:31:export async function storagePut(
+server/storage.ts:71:  return { key, url: `/manus-storage/${key}` };
+server/storage.ts:74:export async function storageGet(relKey: string): Promise<{ key: string; url: string }> {
+server/storage.ts:76:  return { key, url: `/manus-storage/${key}` };
+server/storage.ts:79:export async function storageGetSignedUrl(relKey: string): Promise<string> {
+server/storageProxy.test.ts:25:    const response = await fetch(`http://127.0.0.1:${address.port}/manus-storage/owner-imports/1/source.pdf`);
+server/pdfQueueWorker.ts:6:import { storageGetSignedUrl } from "./storage";
+server/pdfQueueWorker.ts:15:  storageGetSignedUrl: typeof storageGetSignedUrl;
+server/pdfQueueWorker.ts:26:  storageGetSignedUrl,
+server/pdfQueueWorker.ts:81:      const signedUrl = await dependencies.storageGetSignedUrl(job.storageKey);
+server/pdfQueueWorker.test.ts:25:    storageGetSignedUrl: vi.fn().mockResolvedValue("https://signed.example/source.pdf"),
+server/pdfQueueWorker.test.ts:36:    expect(deps.storageGetSignedUrl).toHaveBeenCalledWith("owner-imports/1/source.pdf");
+server/attemptsAccess.test.ts:14:  return { user: { id: 44, openId: "monthly-test", name: "Monthly Test", email: "monthly@example.com", loginMethod: "manus", role: "student", createdAt: new Date(), updatedAt: new Date(), lastSignedIn: new Date() }, req: {} as TrpcContext["req"], res: {} as TrpcContext["res"] };
+package.json:107:    "vite-plugin-manus-runtime": "0.0.59",
+vite.config.ts:7:import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+vite.config.ts:10:// Manus Debug Collector - Vite Plugin
+vite.config.ts:15:const LOG_DIR = path.join(PROJECT_ROOT, ".manus-logs");
+vite.config.ts:73: * - POST /__manus__/logs: Browser sends logs, written directly to files
+vite.config.ts:77:function vitePluginManusDebugCollector(): Plugin {
+vite.config.ts:79:    name: "manus-debug-collector",
+vite.config.ts:91:              src: "/__manus__/debug-collector.js",
+vite.config.ts:101:      // POST /__manus__/logs: Browser sends logs (written directly to files)
+vite.config.ts:102:      server.middlewares.use("/__manus__/logs", (req, res, next) => {
+vite.config.ts:153:const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+vite.config.ts:186:      ".manuspre.computer",
+vite.config.ts:187:      ".manus.computer",
+vite.config.ts:188:      ".manus-asia.computer",
+vite.config.ts:189:      ".manuscomputer.ai",
+vite.config.ts:190:      ".manusvm.computer",
+--- imports of core modules ---
+client/src/components/DashboardLayout.tsx:1:import { useAuth } from "@/_core/hooks/useAuth";
+client/src/pages/Home.tsx:1:import { useAuth } from "@/_core/hooks/useAuth";
+server/_core/voiceTranscription.ts:249: * import { transcribeAudio } from "./_core/voiceTranscription";
+server/auth.logout.test.ts:4:import type { TrpcContext } from "./_core/context";
+server/contentPipeline.ts:1:import { invokeLLM, listLLMModels } from "./_core/llm";
+server/ownerConsole.crud.test.ts:2:import type { TrpcContext } from "./_core/context";
+server/ownerConsole.crud.test.ts:3:import { ENV } from "./_core/env";
+server/rbac.test.ts:3:import type { TrpcContext } from "./_core/context";
+server/rbac.test.ts:4:import { ENV } from "./_core/env";
+server/routers.ts:13:import { getSessionCookieOptions } from "./_core/cookies";
+server/routers.ts:14:import { createHeartbeatJob, updateHeartbeatJob } from "./_core/heartbeat";
+server/routers.ts:15:import { systemRouter } from "./_core/systemRouter";
+server/routers.ts:16:import { adminProcedure, ownerProcedure, protectedProcedure, publicProcedure, reviewerProcedure, router } from "./_core/trpc";
+server/routers.ts:17:import { ENV } from "./_core/env";
+server/security.ts:5:import { ENV } from "./_core/env";
+server/storage.ts:5:import { ENV } from "./_core/env";
+server/storageProxy.test.ts:7:import { registerStorageProxy } from "./_core/storageProxy";
+server/queueScheduler.ts:5:import { sdk } from "./_core/sdk";
+server/attemptsAccess.test.ts:2:import type { TrpcContext } from "./_core/context";
