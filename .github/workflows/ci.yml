@@ -1,3 +1,4 @@
+
 name: Continuous Integration
 
 on:
@@ -8,14 +9,40 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: mockequinox_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    env:
+      DATABASE_URL: mysql://root:root@127.0.0.1:3306/mockequinox_test
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+
       - run: pnpm install --frozen-lockfile
+
+      - run: pnpm db:push
+
       - run: pnpm test
+
       - run: pnpm check
+
       - run: pnpm build
